@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prince Kashyap - Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header -->
+    <header id="header"
+        class="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="text-2xl font-bold tracking-wider">
+                    <a href="#home" class="scroll-link">P<span class="section-title-gradient">Kashyap</span></a>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-lg font-medium scroll-link active">Home</a>
+                    <a href="#services" class="nav-link text-lg font-medium scroll-link">Services</a>
+                    <a href="#skills" class="nav-link text-lg font-medium scroll-link">Skills</a>
+                    <a href="#contact" class="nav-link text-lg font-medium scroll-link">Contact</a>
+                </nav>
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden px-4 pt-2 pb-4 space-y-2 bg-gray-900/95">
+            <a href="#home" class="block nav-link text-lg font-medium scroll-link active">Home</a>
+            <a href="#services" class="block nav-link text-lg font-medium scroll-link">Services</a>
+            <a href="#skills" class="block nav-link text-lg font-medium scroll-link">Skills</a>
+            <a href="#contact" class="block nav-link text-lg font-medium scroll-link">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="text-center md:text-left reveal">
+                        <p class="text-xl md:text-2xl mb-2 text-gray-400">Hi, It's</p>
+                        <h1 class="text-5xl md:text-7xl font-extrabold mb-2">Prince Kashyap</h1>
+                        <h2 class="text-animation"> I'm a <span></span></h2>
+                        <p class="text-gray-400 max-w-xl mx-auto md:mx-0 mb-8">
+                            Welcome to my portfolio! I'm Prince Kashyap, a skilled web developer proficient in UI/UX
+                            design and Python scripting. Let's create something amazing together.
+                        </p>
+                        <div class="flex justify-center md:justify-start space-x-4 mb-8">
+                            <a href="#"
+                                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-500 transition-colors"><i
+                                    data-feather="github"></i></a>
+                            <a href="#"
+                                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-500 transition-colors"><i
+                                    data-feather="linkedin"></i></a>
+                            <a href="#"
+                                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-500 transition-colors"><i
+                                    data-feather="twitter"></i></a>
+                            <a href="#"
+                                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-500 transition-colors"><i
+                                    data-feather="instagram"></i></a>
+                        </div>
+                        <a href="prince.pdf" download="Prince Kashyap - CV.pdf"
+                            class="btn-primary inline-flex items-center gap-2 text-white font-bold py-3 px-8 rounded-full text-lg">
+                            <i data-feather="download" class="w-5 h-5"></i>
+                            Download CV
+                        </a>
+                    </div>
+                    <div class="relative flex justify-center items-center reveal">
+                        <div class="hero-glow"></div>
+                        <div class="orbit-container">
+                            <div class="satellite satellite-1"></div>
+                            <div class="satellite satellite-2"></div>
+                            <div class="satellite satellite-3"></div>
+                        </div>
+                        <div class="profile-img-container w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+                            <img src="prince.jpg" alt="" class="profile-img w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section bg-[#111111]">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-2">My <span
+                            class="section-title-gradient">Services</span></h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Comprehensive web development services tailored to bring
+                        your vision to life</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="service-card p-8 rounded-lg text-center reveal">
+                        <div class="inline-block bg-purple-900/20 text-purple-400 p-4 rounded-full mb-4">
+                            <i data-feather="code" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Web Development</h3>
+                        <p class="text-gray-400 mb-4">Building modern, responsive websites with cutting-edge
+                            technologies and best practices.</p>
+                        <a href="#" class="font-bold text-purple-400 hover:text-purple-300">Learn More</a>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="service-card p-8 rounded-lg text-center reveal" style="transition-delay: 100ms;">
+                        <div class="inline-block bg-purple-900/20 text-purple-400 p-4 rounded-full mb-4">
+                            <i data-feather="pen-tool" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">UI/UX Design</h3>
+                        <p class="text-gray-400 mb-4">Creating beautiful and intuitive interfaces that users love to
+                            interact with.</p>
+                        <a href="#" class="font-bold text-purple-400 hover:text-purple-300">Learn More</a>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="service-card p-8 rounded-lg text-center reveal" style="transition-delay: 200ms;">
+                        <div class="inline-block bg-purple-900/20 text-purple-400 p-4 rounded-full mb-4">
+                            <i data-feather="smartphone" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Responsive Design</h3>
+                        <p class="text-gray-400 mb-4">Ensuring your website looks perfect on all devices, from mobile to
+                            desktop.</p>
+                        <a href="#" class="font-bold text-purple-400 hover:text-purple-300">Learn More</a>
+                    </div>
+                    <!-- Service Card 4 -->
+                    <div class="service-card p-8 rounded-lg text-center reveal" style="transition-delay: 0ms;">
+                        <div class="inline-block bg-purple-900/20 text-purple-400 p-4 rounded-full mb-4">
+                            <i data-feather="figma" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Frontend Development</h3>
+                        <p class="text-gray-400 mb-4">Crafting interactive and dynamic user experiences with modern
+                            frameworks.</p>
+                        <a href="#" class="font-bold text-purple-400 hover:text-purple-300">Learn More</a>
+                    </div>
+                    <!-- Service Card 5 -->
+                    <div class="service-card p-8 rounded-lg text-center reveal" style="transition-delay: 100ms;">
+                        <div class="inline-block bg-purple-900/20 text-purple-400 p-4 rounded-full mb-4">
+                            <i data-feather="database" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Backend Integration</h3>
+                        <p class="text-gray-400 mb-4">Connecting your frontend with robust backend services and APIs.
+                        </p>
+                        <a href="#" class="font-bold text-purple-400 hover:text-purple-300">Learn More</a>
+                    </div>
+                    <!-- Service Card 6 -->
+                    <div class="service-card p-8 rounded-lg text-center reveal" style="transition-delay: 200ms;">
+                        <div class="inline-block bg-purple-900/20 text-purple-400 p-4 rounded-full mb-4">
+                            <i data-feather="zap" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Performance</h3>
+                        <p class="text-gray-400 mb-4">Optimizing your application for lightning-fast load times and
+                            smooth interactions.</p>
+                        <a href="#" class="font-bold text-purple-400 hover:text-purple-300">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-2">My <span
+                            class="section-title-gradient">Skills</span></h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Technologies I work with to bring ideas to life</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Skill 1 -->
+                    <div class="skill-card p-6 rounded-lg reveal">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xl font-bold">HTML5</span>
+                            <span class="font-semibold">95%</span>
+                        </div>
+                        <div class="progress-bar w-full h-3 rounded-full overflow-hidden">
+                            <div class="progress-bar-inner rounded-full bg-gradient-to-r from-orange-500 to-red-600"
+                                data-width="95%"></div>
+                        </div>
+                    </div>
+                    <!-- Skill 2 -->
+                    <div class="skill-card p-6 rounded-lg reveal" style="transition-delay: 100ms;">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xl font-bold">CSS3</span>
+                            <span class="font-semibold">90%</span>
+                        </div>
+                        <div class="progress-bar w-full h-3 rounded-full overflow-hidden">
+                            <div class="progress-bar-inner rounded-full bg-gradient-to-r from-pink-500 to-fuchsia-500"
+                                data-width="90%"></div>
+                        </div>
+                    </div>
+                    <!-- Skill 3 -->
+                    <div class="skill-card p-6 rounded-lg reveal" style="transition-delay: 200ms;">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xl font-bold">JavaScript</span>
+                            <span class="font-semibold">88%</span>
+                        </div>
+                        <div class="progress-bar w-full h-3 rounded-full overflow-hidden">
+                            <div class="progress-bar-inner rounded-full bg-gradient-to-r from-yellow-400 to-amber-500"
+                                data-width="88%"></div>
+                        </div>
+                    </div>
+                    <!-- Skill 4 -->
+                    <div class="skill-card p-6 rounded-lg reveal" style="transition-delay: 300ms;">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xl font-bold">Bootstrap</span>
+                            <span class="font-semibold">85%</span>
+                        </div>
+                        <div class="progress-bar w-full h-3 rounded-full overflow-hidden">
+                            <div class="progress-bar-inner rounded-full bg-gradient-to-r from-purple-500 to-indigo-600"
+                                data-width="85%"></div>
+                        </div>
+                    </div>
+                    <!-- Skill 5 -->
+                    <div class="skill-card p-6 rounded-lg reveal" style="transition-delay: 400ms;">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xl font-bold">React</span>
+                            <span class="font-semibold">82%</span>
+                        </div>
+                        <div class="progress-bar w-full h-3 rounded-full overflow-hidden">
+                            <div class="progress-bar-inner rounded-full bg-gradient-to-r from-cyan-400 to-sky-500"
+                                data-width="82%"></div>
+                        </div>
+                    </div>
+                    <!-- Skill 6 -->
+                    <div class="skill-card p-6 rounded-lg reveal" style="transition-delay: 500ms;">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xl font-bold">Python</span>
+                            <span class="font-semibold">80%</span>
+                        </div>
+                        <div class="progress-bar w-full h-3 rounded-full overflow-hidden">
+                            <div class="progress-bar-inner rounded-full bg-gradient-to-r from-green-400 to-teal-500"
+                                data-width="80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section bg-[#111111]">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-2">Get In <span
+                            class="section-title-gradient">Touch</span></h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Let's discuss your project and bring your ideas to life
+                    </p>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div class="reveal">
+                        <h3 class="text-3xl font-bold mb-4">Let's work together</h3>
+                        <p class="text-gray-400 mb-8">
+                            I'm always open to discussing new projects, creative ideas, or opportunities to be part of
+                            your vision. Feel free to reach out!
+                        </p>
+                        <div class="space-y-4">
+                            <div class="contact-info-item">
+                                <i data-feather="mail" class="w-6 h-6 text-purple-400"></i>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p class="text-gray-400">princekas010101@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <i data-feather="phone" class="w-6 h-6 text-purple-400"></i>
+                                <div>
+                                    <h4 class="font-semibold">Phone</h4>
+                                    <p class="text-gray-400">+91 9759673770</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <i data-feather="map-pin" class="w-6 h-6 text-purple-400"></i>
+                                <div>
+                                    <h4 class="font-semibold">Location</h4>
+                                    <p class="text-gray-400">India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form id="contact-form" action="https://formspree.io/f/xjkaowwq" method="POST" class="reveal"
+                        style="transition-delay: 100ms;">
+                        <div class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-400 mb-2">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe"
+                                    class="form-input w-full p-3 rounded-md focus:ring-purple-500 focus:border-purple-500"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-400 mb-2">Your
+                                    Email</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com"
+                                    class="form-input w-full p-3 rounded-md focus:ring-purple-500 focus:border-purple-500"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="message"
+                                    class="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5"
+                                    placeholder="Tell me about your project..."
+                                    class="form-input w-full p-3 rounded-md focus:ring-purple-500 focus:border-purple-500"
+                                    required></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full btn-primary text-white font-bold py-3 px-6 rounded-md">Send
+                                Message</button>
+                            <p id="form-status" class="text-center mt-4"></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 border-t border-gray-800 py-6">
+        <div class="container mx-auto text-center text-gray-500">
+            <p>&copy; 2025 Prince Kashyap. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

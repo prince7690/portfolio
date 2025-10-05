@@ -1,0 +1,243 @@
+:root {
+    --primary-color: #A020F0; /* A more vibrant purple */
+    --gradient-start: #C832E5;
+    --gradient-end: #A020F0;
+
+    
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0a0a0a;
+    color: #e5e7eb; /* gray-200 */
+}
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem;
+    overflow-x: hidden; /* Prevent horizontal scrollbar during animations */
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 6rem 1rem;
+    }
+}
+
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+.nav-link.active,
+.nav-link:hover {
+    color: var(--primary-color);
+}
+.nav-link.active::after,
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.hero-glow {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(160, 32, 240, 0.3) 0%, rgba(10, 10, 10, 0) 70%);
+    border-radius: 50%;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse-glow 5s infinite alternate ease-in-out;
+}
+
+@keyframes pulse-glow {
+    from { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+    to { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+}
+
+.profile-img-container {
+    position: relative;
+    padding: 10px;
+    z-index: 10; /* Ensure image is on top of the new animation */
+}
+.profile-img-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    padding: 2px; 
+    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end)); 
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+.profile-img {
+    border-radius: 50%;
+}
+
+.orbit-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 1; 
+}
+
+.satellite {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -4px; /* half of height */
+    margin-left: -4px; /* half of width */
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+}
+
+.satellite-1 { animation: orbit-1 15s infinite linear; }
+.satellite-2 { animation: orbit-2 12s infinite linear; animation-delay: -5s; }
+.satellite-3 { animation: orbit-3 18s infinite linear; animation-delay: -10s; }
+
+@keyframes orbit-1 {
+    from { transform: rotate(0deg) translateX(150px) scale(0.8); }
+    to { transform: rotate(360deg) translateX(150px) scale(0.8); }
+}
+@keyframes orbit-2 {
+    from { transform: rotate(0deg) translateX(180px) scale(1); }
+    to { transform: rotate(360deg) translateX(180px) scale(1); }
+}
+@keyframes orbit-3 {
+    from { transform: rotate(0deg) translateX(210px) scale(1.2); }
+    to { transform: rotate(360deg) translateX(210px) scale(1.2); }
+}
+
+@media (max-width: 640px) { /* Adjust orbit for smaller screens */
+    @keyframes orbit-1 {
+        from { transform: rotate(0deg) translateX(120px) scale(0.8); }
+        to { transform: rotate(360deg) translateX(120px) scale(0.8); }
+    }
+    @keyframes orbit-2 {
+        from { transform: rotate(0deg) translateX(140px) scale(1); }
+        to { transform: rotate(360deg) translateX(140px) scale(1); }
+    }
+    @keyframes orbit-3 {
+        from { transform: rotate(0deg) translateX(160px) scale(1.2); }
+        to { transform: rotate(360deg) translateX(160px) scale(1.2); }
+    }
+}
+
+.service-card, .skill-card {
+    background-color: #111111;
+    border: 1px solid #27272a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.service-card:hover, .skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(160, 32, 240, 0.15);
+    border-color: var(--primary-color);
+}
+
+.progress-bar {
+    background-color: #27272a;
+}
+.progress-bar-inner {
+    height: 100%;
+    transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.form-input {
+    background-color: #1a1a1a;
+    border: 1px solid #373737;
+}
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(160, 32, 240, 0.5);
+}
+
+.btn-primary {
+    background-image: linear-gradient(to right, var(--gradient-start) 0%, var(--primary-color) 51%, var(--gradient-start) 100%);
+    background-size: 200% auto;
+    transition: background-position 0.5s;
+}
+.btn-primary:hover {
+   background-position: right center;
+}
+
+.section-title-gradient {
+    background: -webkit-linear-gradient(45deg, var(--gradient-start), var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #111111;
+    border: 1px solid #27272a;
+    border-radius: 0.5rem;
+}
+
+/* Animation Classes */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ADD THIS NEW CSS */
+.text-animation {
+    font-size: 3rem; /* 48px */
+    font-weight: 700;
+    line-height: 1;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.text-animation span {
+    color: var(--primary-color); /* Uses your existing purple color */
+    position: relative;
+}
+
+/* This creates the blinking cursor */
+/* This is the NEW, corrected code for the cursor */
+/* .text-animation span::after {
+    content: '';
+    position: absolute;
+    width: 2px; /* Made it thinner */
+    height: 0.9em; /* Set height relative to font size, not the full line */
+    background-color: var(--primary-color);
+    right: -8px;
+    top: 50%; /* This and the next line perfectly center the cursor */
+    transform: translateY(-50%);
+    animation: blink 0.7s infinite;
+} */
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
